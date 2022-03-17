@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      .zoom:hover{
+    transform: scale(1.5);
+    transition: 0.8s;
+    }
+    </style>
+    
+    <title>Gallery</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center fw-light text-lg-start mt-4">Gallery</h1>
+        <hr class="mt-2">
+        <div class="row text-center text-lg-start">
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100"><img src="./images/pic1.jpg" alt="" class="img-fluid img-thumbnail  zoom"></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic2.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic3.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic4.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic5.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic6.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic7.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic8.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic9.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic10.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic11.jpg" alt="">
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-4 col-6">
+                <a href="#" class="d-block mb-4 h-100">
+                  <img class="img-fluid img-thumbnail zoom" src="./images/pic12.jpg" alt="">
+                </a>
+              </div>
+        </div>
+    </div>
+        <!-- Footer -->
+   <div class="footer mt-5 bg-dark h-50 py-lg-5">
+        <div class="footer-heading text-center">
+          <h2 class="text-light">Gallery</h2>
+        </div>
+        <div class="social-icons text-center ">
+          <span class="text-danger fs-3 px-3"><i class="fa-brands fa-twitter-square"></i></span>
+          <span class="text-danger fs-3 px-3"><i class="fa-brands fa-facebook-square"></i></span>
+          <span class="text-danger fs-3 px-3"><i class="fa-brands fa-instagram-square"></i></span>
+        </div>
+        <div class="text-center text-light mt-lg-5 ">
+           <h5>copyright &copy; 2022 All rights reserved</h5>
+        </div>
+   </div>
+         <!-- Modal -->
+<div class="modal fade" id="gallery-modal" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered modal-sm">
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+       </div>
+       <div class="modal-body">
+        <img class="img-fluid img-thumbnail zoom-image" src="./images/pic1.jpg" alt="">
+       </div>
+     </div>
+   </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('click',function(e){
+    if (e.target.classList.contains('zoom')){
+        const srcs = e.target.getAttribute('src');
+        document.querySelector('.zoom-image').src = srcs;
+        const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'))
+        myModal.show();
+    }
+})
+    </script>
+</body>
+</html>
